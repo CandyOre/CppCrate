@@ -1,7 +1,7 @@
 #include <string>
 
 //A string representing a float number to a double number
-double func ( std::string str ) {
+double str_to_double ( std::string str ) {
     int i;
     for ( i = 0; i < str.size(); i++ ) if ( str[i] == '.' ) break;
     if ( i == str.size() ) return 0;
@@ -11,3 +11,11 @@ double func ( std::string str ) {
     for ( int j = str.size() - 1; j > i; j--) b = b / 10 + 0.1 * ( str[j] - '0' );
     return a + b;
 }
+
+/*
+int main() {
+    string str = "123.45";
+    cout << str_to_double ( str );
+    return 0;
+}
+*/
